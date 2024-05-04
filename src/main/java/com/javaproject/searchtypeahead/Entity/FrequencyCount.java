@@ -4,27 +4,33 @@ package com.javaproject.searchtypeahead.Entity;
 import jakarta.persistence.*;
 
 @Entity
-@Table(name = "query_frequency")
-public class QueryFrequency {
+@Table(name = "frequency_count")
+public class FrequencyCount {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "query_id")
     private long id;
 
-    @Column(name = "query_string")
+    @Column(name = "query")
     private String query;
 
     @Column(name = "query_frequency")
     private long frequency;
 
-    public QueryFrequency(String query, long frequency) {
+    public FrequencyCount(String query, long frequency) {
         this.query = query;
         this.frequency = frequency;
     }
 
-    public QueryFrequency(){
+    public FrequencyCount(){}
 
+    public long getId() {
+        return id;
+    }
+
+    public void setId(long id) {
+        this.id = id;
     }
 
     public String getWord() {

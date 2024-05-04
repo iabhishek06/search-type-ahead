@@ -1,7 +1,7 @@
 package com.javaproject.searchtypeahead.Service;
 
 
-import com.javaproject.searchtypeahead.Entity.QueryFrequency;
+import com.javaproject.searchtypeahead.Entity.FrequencyCount;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -13,7 +13,7 @@ public class SuggestionServiceImpl implements ISuggestionService{
 
 
     @Override
-    public List<QueryFrequency> getSuggestion(String query) {
+    public List<FrequencyCount> getSuggestion(String query) {
         return null;
     }
 }

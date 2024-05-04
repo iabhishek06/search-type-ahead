@@ -9,4 +9,9 @@ public interface SuggestionsDataStructure {
     // this method will initialize the data structure when it will be called
 
     List<Suggestion> getTopSuggestions(String query);
+
+    void reload(); // near real time
+    // cache(RAM) <=in-sync=> table(DB)
+
+
 }

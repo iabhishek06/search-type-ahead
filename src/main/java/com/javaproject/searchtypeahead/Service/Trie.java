@@ -1,10 +1,9 @@
 package com.javaproject.searchtypeahead.Service;
 
-import com.javaproject.searchtypeahead.Dao.QueryRepository;
-import com.javaproject.searchtypeahead.Entity.QueryFrequency;
+import com.javaproject.searchtypeahead.Dao.FrequencyCountRepository;
+import com.javaproject.searchtypeahead.Entity.FrequencyCount;
 import org.springframework.beans.factory.annotation.Autowired;
 
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -13,7 +12,7 @@ public class Trie implements SuggestionsDataStructure {
 
 
     @Autowired
-    private QueryRepository queryRepository;
+    private FrequencyCountRepository queryRepository;
   // always code against interface
     private final TrieNode root;
     private int k;
@@ -27,7 +26,7 @@ public class Trie implements SuggestionsDataStructure {
         this.k = maxSuggestions;
 
         // code to fetch data from DB and make trie
-        List<QueryFrequency> wordsList = queryRepository.findAll();
+        List<FrequencyCount> wordsList = queryRepository.findAll();
         Map<String,Integer> wordFrequencyMap = new HashMap<>();
         for(String word : wordsList){
 

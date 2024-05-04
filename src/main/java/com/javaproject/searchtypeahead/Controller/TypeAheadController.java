@@ -1,6 +1,5 @@
 package com.javaproject.searchtypeahead.Controller;
 
-import com.javaproject.searchtypeahead.Service.ISuggestionService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -10,7 +9,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/search")
-public class QueryController {
+public class TypeAheadController {
 
     @Autowired
     private ISuggestionService iSuggestionService;

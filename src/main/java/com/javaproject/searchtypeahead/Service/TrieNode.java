@@ -13,8 +13,11 @@ public class TrieNode {
 
     public TrieNode(){
         this.isEndOfWord = false;
+
+        // This list is intended to hold top suggestions associated with the current node.
         this.topSuggestions = new ArrayList<>();
 
+        //This list is meant to store references to child nodes, representing the edges in the trie data structure.
         this.pointers = new ArrayList<>();
 
         for(int i=0;i<26;i++){
@@ -42,4 +45,5 @@ public class TrieNode {
     public void setTopSuggestions(List<Suggestion> topSuggestions){
         this.topSuggestions = topSuggestions;
     }
+
 }
