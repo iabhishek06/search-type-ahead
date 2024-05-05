@@ -33,11 +33,11 @@ public class FrequencyCount {
         this.id = id;
     }
 
-    public String getWord() {
+    public String getQuery() {
         return query;
     }
 
-    public void setWord(String query) {
+    public void setQuery(String query) {
         this.query = query;
     }
 
